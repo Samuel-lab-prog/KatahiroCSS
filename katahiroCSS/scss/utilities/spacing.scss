@@ -1,53 +1,53 @@
-@import '../abstracts/functions.scss';
-@import '../abstracts/variables.scss';
+@use '../abstracts/functions.scss' as function;
+@use '../abstracts/variables.scss' as variable;
 
 @for $i from 1 through 25 {
 
-  .m-#{$i}  { margin: multiply($i, $unit2); }
-  .mx-#{$i} { margin-left: multiply($i, $unit2); margin-right: multiply($i, $unit2); }
-  .my-#{$i} { margin-top: multiply($i, $unit2); margin-bottom: multiply($i, $unit2); }
-  .mt-#{$i} { margin-top: multiply($i, $unit2); }
-  .mb-#{$i} { margin-bottom: multiply($i, $unit2); }
-  .ml-#{$i} { margin-left: multiply($i, $unit2); }
-  .mr-#{$i} { margin-right: multiply($i, $unit2); }
+  .m-#{$i}  { margin: function.multiply($i, variable.$unit2); }
+  .mx-#{$i} { margin-left: function.multiply($i, variable.$unit2); margin-right: function.multiply($i, variable.$unit2); }
+  .my-#{$i} { margin-top: function.multiply($i, variable.$unit2); margin-bottom: function.multiply($i, variable.$unit2); }
+  .mt-#{$i} { margin-top: function.multiply($i, variable.$unit2); }
+  .mb-#{$i} { margin-bottom: function.multiply($i, variable.$unit2); }
+  .ml-#{$i} { margin-left: function.multiply($i, variable.$unit2); }
+  .mr-#{$i} { margin-right: function.multiply($i, variable.$unit2); }
 
-  .p-#{$i}  { padding: multiply($i, $unit2); }
-  .px-#{$i} { padding-left: multiply($i, $unit2); padding-right: multiply($i, $unit2); }
-  .py-#{$i} { padding-top: multiply($i, $unit2); padding-bottom: multiply($i, $unit2); }
-  .pt-#{$i} { padding-top: multiply($i, $unit2); }
-  .pb-#{$i} { padding-bottom: multiply($i, $unit2); }
-  .pl-#{$i} { padding-left: multiply($i, $unit2); }
-  .pr-#{$i} { padding-right: multiply($i, $unit2); }
+  .p-#{$i}  { padding: function.multiply($i, variable.$unit2); }
+  .px-#{$i} { padding-left: function.multiply($i, variable.$unit2); padding-right: function.multiply($i, variable.$unit2); }
+  .py-#{$i} { padding-top: function.multiply($i, variable.$unit2); padding-bottom: function.multiply($i, variable.$unit2); }
+  .pt-#{$i} { padding-top: function.multiply($i, variable.$unit2); }
+  .pb-#{$i} { padding-bottom: function.multiply($i, variable.$unit2); }
+  .pl-#{$i} { padding-left: function.multiply($i, variable.$unit2); }
+  .pr-#{$i} { padding-right: function.multiply($i, variable.$unit2); }
   
-  .gap-#{$i}  { gap: multiply($i, $unit2); }
-  .gapx-#{$i} { column-gap: multiply($i, $unit2); }
-  .gapy-#{$i} { row-gap: multiply($i, $unit2); }
+  .gap-#{$i}  { gap: function.multiply($i, variable.$unit2); }
+  .gapx-#{$i} { column-gap: function.multiply($i, variable.$unit2); }
+  .gapy-#{$i} { row-gap: function.multiply($i, variable.$unit2); }
 
   .z-#{$i} { z-index: $i; }
 
 
-  @each $breakpoint, $value in $breakpoints {
+  @each $breakpoint, $value in variable.$breakpoints {
     @media (min-width: #{$value}) {
 
-      .m-#{$breakpoint}-#{$i}  { margin: multiply($i, $unit2); }
-      .mx-#{$breakpoint}-#{$i} { margin-left: multiply($i, $unit2); margin-right: multiply($i, $unit2); }
-      .my-#{$breakpoint}-#{$i} { margin-top: multiply($i, $unit2); margin-bottom: multiply($i, $unit2); }
-      .mt-#{$breakpoint}-#{$i} { margin-top: multiply($i, $unit2); }
-      .mb-#{$breakpoint}-#{$i} { margin-bottom: multiply($i, $unit2); }
-      .ml-#{$breakpoint}-#{$i} { margin-left: multiply($i, $unit2); }
-      .mr-#{$breakpoint}-#{$i} { margin-right: multiply($i, $unit2); }
+      .m-#{$breakpoint}-#{$i}  { margin: function.multiply($i, variable.$unit2); }
+      .mx-#{$breakpoint}-#{$i} { margin-left: function.multiply($i, variable.$unit2); margin-right: function.multiply($i, variable.$unit2); }
+      .my-#{$breakpoint}-#{$i} { margin-top: function.multiply($i, variable.$unit2); margin-bottom: function.multiply($i, variable.$unit2); }
+      .mt-#{$breakpoint}-#{$i} { margin-top: function.multiply($i, variable.$unit2); }
+      .mb-#{$breakpoint}-#{$i} { margin-bottom: function.multiply($i, variable.$unit2); }
+      .ml-#{$breakpoint}-#{$i} { margin-left: function.multiply($i, variable.$unit2); }
+      .mr-#{$breakpoint}-#{$i} { margin-right: function.multiply($i, variable.$unit2); }
 
-      .p-#{$breakpoint}-#{$i}  { padding: multiply($i, $unit2); }
-      .px-#{$breakpoint}-#{$i} { padding-left: multiply($i, $unit2); padding-right: multiply($i, $unit2); }
-      .py-#{$breakpoint}-#{$i} { padding-top: multiply($i, $unit2); padding-bottom: multiply($i, $unit2); }
-      .pt-#{$breakpoint}-#{$i} { padding-top: multiply($i, $unit2); }
-      .pb-#{$breakpoint}-#{$i} { padding-bottom: multiply($i, $unit2); }
-      .pl-#{$breakpoint}-#{$i} { padding-left: multiply($i, $unit2); }
-      .pr-#{$breakpoint}-#{$i} { padding-right: multiply($i, $unit2); }
+      .p-#{$breakpoint}-#{$i}  { padding: function.multiply($i, variable.$unit2); }
+      .px-#{$breakpoint}-#{$i} { padding-left: function.multiply($i, variable.$unit2); padding-right: function.multiply($i, variable.$unit2); }
+      .py-#{$breakpoint}-#{$i} { padding-top: function.multiply($i, variable.$unit2); padding-bottom: function.multiply($i, variable.$unit2); }
+      .pt-#{$breakpoint}-#{$i} { padding-top: function.multiply($i, variable.$unit2); }
+      .pb-#{$breakpoint}-#{$i} { padding-bottom: function.multiply($i, variable.$unit2); }
+      .pl-#{$breakpoint}-#{$i} { padding-left: function.multiply($i, variable.$unit2); }
+      .pr-#{$breakpoint}-#{$i} { padding-right: function.multiply($i, variable.$unit2); }
 
-      .gap-#{$breakpoint}-#{$i}  { gap: multiply($i, $unit2); }
-      .gapx-#{$breakpoint}-#{$i} { column-gap: multiply($i, $unit2); }
-      .gapy-#{$breakpoint}-#{$i} { row-gap: multiply($i, $unit2); }
+      .gap-#{$breakpoint}-#{$i}  { gap: function.multiply($i, variable.$unit2); }
+      .gapx-#{$breakpoint}-#{$i} { column-gap: function.multiply($i, variable.$unit2); }
+      .gapy-#{$breakpoint}-#{$i} { row-gap: function.multiply($i, variable.$unit2); }
 
       .z-#{$breakpoint}-#{$i} { z-index: $i; }
     }
@@ -55,19 +55,19 @@
 }
 
 @for $i from -25 through 0 {
-  .m-#{$i}  { margin: multiply($i, $unit2); }
-  .mx-#{$i} { margin-left: multiply($i, $unit2); margin-right: multiply($i, $unit2); }
-  .my-#{$i} { margin-top: multiply($i, $unit2); margin-bottom: multiply($i, $unit2); }
-  .mt-#{$i} { margin-top: multiply($i, $unit2); }
-  .mb-#{$i} { margin-bottom: multiply($i, $unit2); }
-  .ml-#{$i} { margin-left: multiply($i, $unit2); }
-  .mr-#{$i} { margin-right: multiply($i, $unit2); }
+  .m-#{$i}  { margin: function.multiply($i, variable.$unit2); }
+  .mx-#{$i} { margin-left: function.multiply($i, variable.$unit2); margin-right: function.multiply($i, variable.$unit2); }
+  .my-#{$i} { margin-top: function.multiply($i, variable.$unit2); margin-bottom: function.multiply($i, variable.$unit2); }
+  .mt-#{$i} { margin-top: function.multiply($i, variable.$unit2); }
+  .mb-#{$i} { margin-bottom: function.multiply($i, variable.$unit2); }
+  .ml-#{$i} { margin-left: function.multiply($i, variable.$unit2); }
+  .mr-#{$i} { margin-right: function.multiply($i, variable.$unit2); }
 
-  .p-#{$i}  { padding: multiply($i, $unit2); }
-  .px-#{$i} { padding-left: multiply($i, $unit2); padding-right: multiply($i, $unit2); }
-  .py-#{$i} { padding-top: multiply($i, $unit2); padding-bottom: multiply($i, $unit2); }
-  .pt-#{$i} { padding-top: multiply($i, $unit2); }
-  .pb-#{$i} { padding-bottom: multiply($i, $unit2); }
-  .pl-#{$i} { padding-left: multiply($i, $unit2); }
-  .pr-#{$i} { padding-right: multiply($i, $unit2); }
+  .p-#{$i}  { padding: function.multiply($i, variable.$unit2); }
+  .px-#{$i} { padding-left: function.multiply($i, variable.$unit2); padding-right: function.multiply($i, variable.$unit2); }
+  .py-#{$i} { padding-top: function.multiply($i, variable.$unit2); padding-bottom: function.multiply($i, variable.$unit2); }
+  .pt-#{$i} { padding-top: function.multiply($i, variable.$unit2); }
+  .pb-#{$i} { padding-bottom: function.multiply($i, variable.$unit2); }
+  .pl-#{$i} { padding-left: function.multiply($i, variable.$unit2); }
+  .pr-#{$i} { padding-right: function.multiply($i, variable.$unit2); }
 }

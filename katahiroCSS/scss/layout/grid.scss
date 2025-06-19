@@ -1,21 +1,24 @@
-@import '../abstracts/variables';
+@use '../abstracts/variables' as variable;
+@use 'sass:map';
+@use 'sass:math';
 
 .container {
   width: 100%;
+  display: flex;
 
-  @media (min-width: map-get($breakpoints, "sm")) {
+  @media (min-width: map.get(variable.$breakpoints, "sm")) {
     max-width: 540px;
   }
 
-  @media (min-width: map-get($breakpoints, "md")) {
+  @media (min-width: map.get(variable.$breakpoints, "md")) {
     max-width: 720px;
   }
 
-  @media (min-width: map-get($breakpoints, "lg")) {
+  @media (min-width: map.get(variable.$breakpoints, "lg")) {
     max-width: 960px;
   }
 
-  @media (min-width: map-get($breakpoints, "xl")) {
+  @media (min-width: map.get(variable.$breakpoints, "xl")) {
     max-width: 1140px;
   }
 }
@@ -31,10 +34,16 @@
 
 @for $i from 1 through 12 {
   .col-#{$i} {
-    flex: 0 0 percentage($i / 12);
-    max-width: percentage($i / 12);
+    flex: 0 0 math.percentage(math.div($i, 12));
+    max-width: math.percentage(math.div($i, 12));
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
   }
+}
+
+@for $i from 1 through 20{
+  .w-#{$i * 5}{width: math.percentage($i*5);}
+  .h-#{$i * 5}{height: math.percentage($i*5);}
 }
