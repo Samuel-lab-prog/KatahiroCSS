@@ -1,0 +1,17 @@
+@import 'variables';
+
+@function multiply($i, $unit) {
+  @return $i * $unit;
+}
+
+@function rem($px) {
+  @return #{$px / 16}rem;
+}
+
+@function grid-percent($cols, $total: 12) {
+  @return percentage($cols / $total);
+}
+
+@function breakpoint($size) {
+  @return map-get($breakpoints, $size);
+}
