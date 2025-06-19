@@ -18,10 +18,6 @@
   .pb-#{$i} { padding-bottom: function.multiply($i, variable.$unit2); }
   .pl-#{$i} { padding-left: function.multiply($i, variable.$unit2); }
   .pr-#{$i} { padding-right: function.multiply($i, variable.$unit2); }
-  
-  .gap-#{$i}  { gap: function.multiply($i, variable.$unit2); }
-  .gapx-#{$i} { column-gap: function.multiply($i, variable.$unit2); }
-  .gapy-#{$i} { row-gap: function.multiply($i, variable.$unit2); }
 
   .z-#{$i} { z-index: $i; }
 
@@ -44,10 +40,6 @@
       .pb-#{$breakpoint}-#{$i} { padding-bottom: function.multiply($i, variable.$unit2); }
       .pl-#{$breakpoint}-#{$i} { padding-left: function.multiply($i, variable.$unit2); }
       .pr-#{$breakpoint}-#{$i} { padding-right: function.multiply($i, variable.$unit2); }
-
-      .gap-#{$breakpoint}-#{$i}  { gap: function.multiply($i, variable.$unit2); }
-      .gapx-#{$breakpoint}-#{$i} { column-gap: function.multiply($i, variable.$unit2); }
-      .gapy-#{$breakpoint}-#{$i} { row-gap: function.multiply($i, variable.$unit2); }
 
       .z-#{$breakpoint}-#{$i} { z-index: $i; }
     }

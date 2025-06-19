@@ -4,23 +4,6 @@
 
 .container {
   width: 100%;
-  display: flex;
-
-  @media (min-width: map.get(variable.$breakpoints, "sm")) {
-    max-width: 540px;
-  }
-
-  @media (min-width: map.get(variable.$breakpoints, "md")) {
-    max-width: 720px;
-  }
-
-  @media (min-width: map.get(variable.$breakpoints, "lg")) {
-    max-width: 960px;
-  }
-
-  @media (min-width: map.get(variable.$breakpoints, "xl")) {
-    max-width: 1140px;
-  }
 }
 
 .row {
@@ -43,7 +26,12 @@
   }
 }
 
-@for $i from 1 through 20{
-  .w-#{$i * 5}{width: math.percentage($i*5);}
-  .h-#{$i * 5}{height: math.percentage($i*5);}
+@for $i from 1 through 20 {
+  .w-#{$i * 5} {
+    width: math.percentage(math.div($i * 5, 100));
+  }
+
+  .h-#{$i * 5} {
+    height: math.percentage(math.div($i * 5, 100));
+  }
 }

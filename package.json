@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --no-source-map katahiroCSS/scss/main.scss katahiroCSS/dist/style.css",
-    "watch": "sass --watch --no-source-map katahiroCSS/scss/main.scss katahiroCSS/style.css"
+    "watch": "sass --watch --no-source-map katahiroCSS/scss/main.scss katahiroCSS/dist/style.css"
     
   },
   "repository": {
