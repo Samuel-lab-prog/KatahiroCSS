@@ -1,0 +1,37 @@
+@use "../abstracts/variables.scss" as variable;
+@use "../abstracts/functions.scss" as function;
+
+@for $i from 1 through 25 {
+  .fs-#{$i} {
+    font-size: function.multiply($i, variable.$unit3);
+  }
+}
+@for $i from 1 through 10 {
+  .fw-#{$i} {
+    font-weight: function.multiply($i, 10);
+  }
+  .line-height-#{$i} {
+    line-height: function.multiply($i, variable.$unit1);
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: start;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+
