@@ -1,13 +1,2 @@
 @use '../abstracts/variables.scss' as variable;
 @use '../abstracts/mixins.scss' as mixin;
-
-
-h1{
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: variable.$font-heading;
-    
-    @include mixin.respond-to(sm){
-
-    }
-}

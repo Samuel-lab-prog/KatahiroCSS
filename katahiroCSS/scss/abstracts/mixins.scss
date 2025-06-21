@@ -1,8 +1,12 @@
-@use './variables.scss' as variable;
+@use "./variables.scss" as variable;
+@use 'sass:map';
 
 @mixin respond-to($breakpoint) {
-  @media (max-width: map-get(variable.$breakpoints, $breakpoint)) {
-    @content;
+  @if map.has-key(variable.$breakpoints, breakpoint) {
+    @media (max-width: map-get(variable.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn 'Breakpoint does not exist';
   }
 }
-

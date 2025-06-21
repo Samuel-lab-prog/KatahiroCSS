@@ -8,7 +8,7 @@
 }
 @for $i from 1 through 10 {
   .fw-#{$i} {
-    font-weight: function.multiply($i, 10);
+    font-weight: function.multiply($i, 100);
   }
   .line-height-#{$i} {
     line-height: function.multiply($i, variable.$unit1);
@@ -33,5 +33,3 @@
 .capitalize {
   text-transform: capitalize;
 }
-
-
